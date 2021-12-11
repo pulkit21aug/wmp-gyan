@@ -28,12 +28,12 @@ public class GoogleOauthHelper implements GoogleOauthHelperIfc {
 	 * CLIENT_ID constant before proceeding, set this up at
 	 * https://code.google.com/apis/console/
 	 */
-	private static String CLIENT_ID = "10340892163-35l51a1fmq6b45dk2s3nuuk8qab4l4o8.apps.googleusercontent.com";
+	private static String CLIENT_ID = "<your>authid";
 	/**
 	 * CLIENT_SECRET constant before proceeding, set this up at
 	 * https://code.google.com/apis/console/
 	 */
-	private static  String CLIENT_SECRET = "gsKzlujqZ2yWPgEHMcWe9yYO";
+	private static  String CLIENT_SECRET = "<your-auth-secret>";
 
 	/**
 	 * Callback URI that google will redirect to after successful authentication
