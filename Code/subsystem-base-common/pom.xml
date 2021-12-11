@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.puls.gyan</groupId>
+		<artifactId>gyan</artifactId>
+		<relativePath>../pom.xml</relativePath>
+		<version>1.0</version>
+	</parent>
+	<groupId>com.puls.gyan</groupId>
+	<artifactId>subsystem-base-common</artifactId>
+	<packaging>pom</packaging>
+	<!-- <version>${global.version}</version> -->
+	<name>subsystem-base-common</name>
+	<description>subsystem-base-common</description>
+	<modules>
+		<module>library-envutil</module>
+		<module>library-logging</module>
+	</modules>
+</project>

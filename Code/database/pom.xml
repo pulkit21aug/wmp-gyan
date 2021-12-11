@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.kronos.noida</groupId>
+		<artifactId>runtime</artifactId>
+		<version>1.0</version>
+	</parent>
+	<groupId>com.kronos.noida</groupId>
+	<artifactId>database</artifactId>
+	<version>1.0</version>
+	<name>database</name>
+	<packaging>jar</packaging>
+
+	<profiles>
+		<profile>
+			<id>dbManager</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.codehaus.mojo</groupId>
+						<artifactId>sql-maven-plugin</artifactId>
+						<version>1.5</version>
+						<dependencies>
+							<dependency>
+								<groupId>mysql</groupId>
+								<artifactId>mysql-connector-java</artifactId>
+								<version>5.1.9</version>
+							</dependency>
+						</dependencies>
+						<configuration>
+							<driver>com.mysql.jdbc.Driver</driver>
+							<url>jdbc:mysql://localhost:3306</url>
+							<username>root</username>
+							<password>password</password>
+						</configuration>
+						<executions>
+							<execution>
+								<id>drop</id>
+								<phase>clean</phase>
+								<goals>
+									<goal>execute</goal>
+								</goals>
+								<configuration>
+									<autocommit>true</autocommit>
+									<onError>continue</onError>
+									<srcFiles>
+										<srcFile>src/main/resources/sql/install/drop_env.sql</srcFile>
+										<srcFile>src/main/resources/sql/install/drop_database.sql</srcFile>
+										<srcFile>src/main/resources/sql/install/drop_user.sql</srcFile>
+									</srcFiles>
+								</configuration>
+							</execution>
+							<execution>
+								<id>create</id>
+								<phase>install</phase>
+								<goals>
+									<goal>execute</goal>
+								</goals>
+								<configuration>
+									<autocommit>true</autocommit>
+									<onError>continue</onError>
+									<srcFiles>
+										<srcFile>src/main/resources/sql/install/create_database.sql</srcFile>
+										<srcFile>src/main/resources/sql/install/create_user.sql</srcFile>
+										<srcFile>src/main/resources/sql/install/create_env.sql</srcFile>
+									</srcFiles>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+
+
+	<description>PLatform : Mysql Tables</description>
+</project>

@@ -1,0 +1,6 @@
+<Context>
+	<Resource name="jdbc/gyanDB" global="jdbc/gyanDB"
+		auth="Container" type="javax.sql.DataSource" driverClassName="com.mysql.jdbc.Driver"
+		url="jdbc:mysql://10.0.0.2:3306/iiml_nc" username="iimlnc_dbadmin"
+		password="password" maxActive="100" maxIdle="20" minIdle="5" maxWait="10000" />
+</Context>

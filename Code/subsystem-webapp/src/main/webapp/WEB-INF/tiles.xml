@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE tiles-definitions PUBLIC  
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"  
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+	<definition name="base.definition" template="/WEB-INF/jsp/layout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/WEB-INF/jsp/header.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+	
+	<definition name="login.definition" template="/WEB-INF/jsp/layout-no.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/WEB-INF/jsp/header-no.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+	
+	<definition name="login" extends="login.definition">
+		<put-attribute name="title" value="Gyan" />
+		<put-attribute name="body" value="/WEB-INF/jsp/login.jsp" />
+	</definition>
+
+	<definition name="index" extends="base.definition">
+		<put-attribute name="title" value="Gyan" />
+		<put-attribute name="body" value="/WEB-INF/jsp/index.jsp" />
+	</definition>
+
+		
+	<!--  Registration definitions -->
+	<definition name="openReg" extends="base.definition">
+		<put-attribute name="title" value="Add Subject" />
+		<put-attribute name="body" value="/WEB-INF/jsp/openReg.jsp" />
+	</definition>
+	<definition name="viewAllReg" extends="base.definition">
+		<put-attribute name="title" value="Add Subject" />
+		<put-attribute name="body" value="/WEB-INF/jsp/viewAllReg.jsp" />
+	</definition>
+	<definition name="viewRegDetail" extends="base.definition">
+		<put-attribute name="title" value="Add Subject" />
+		<put-attribute name="body" value="/WEB-INF/jsp/viewRegDetail.jsp" />
+	</definition>
+	<definition name="viewRegFormInfo" extends="base.definition">
+		<put-attribute name="title" value="Add Subject" />
+		<put-attribute name="body" value="/WEB-INF/jsp/viewRegFormInfo.jsp" />
+	</definition>
+	<definition name="viewStudentRegFormDetail" extends="base.definition">
+		<put-attribute name="title" value="Add Subject" />
+		<put-attribute name="body" value="/WEB-INF/jsp/viewStudentRegFormDetail.jsp" />
+	</definition>
+	<definition name="approveReg" extends="base.definition">
+		<put-attribute name="title" value="Add Subject" />
+		<put-attribute name="body" value="/WEB-INF/jsp/approveReg.jsp" />
+	</definition>
+	<definition name="srhRegInfo" extends="base.definition">
+		<put-attribute name="title" value="Add Subject" />
+		<put-attribute name="body" value="/WEB-INF/jsp/srhRegInfo.jsp" />
+	</definition>
+	<definition name="srhRegOfUser" extends="base.definition">
+		<put-attribute name="title" value="Add Subject" />
+		<put-attribute name="body" value="/WEB-INF/jsp/srhRegOfUser.jsp" />
+	</definition>
+	
+	
+	
+	
+	
+	<!-- Employee  definitions -->
+	<definition name="addEmp" extends="base.definition">
+		<put-attribute name="title" value="Add Employee" />
+		<put-attribute name="body" value="/WEB-INF/jsp/addEmp.jsp" />
+	</definition>
+	<definition name="viewAllEmp" extends="base.definition">
+		<put-attribute name="title" value="View aLL Emp Details" />
+		<put-attribute name="body" value="/WEB-INF/jsp/viewAllEmp.jsp" />
+	</definition>
+	<definition name="viewEmp" extends="base.definition">
+		<put-attribute name="title" value="View Emp Details" />
+		<put-attribute name="body" value="/WEB-INF/jsp/viewEmp.jsp" />
+	</definition>
+
+		<!-- Student  definitions -->
+	<definition name="addStudent" extends="base.definition">
+		<put-attribute name="title" value="Add Student" />
+		<put-attribute name="body" value="/WEB-INF/jsp/addStudent.jsp" />
+	</definition>
+	<definition name="viewAllStudent" extends="base.definition">
+		<put-attribute name="title" value="View aLL Student Details" />
+		<put-attribute name="body" value="/WEB-INF/jsp/viewAllStudent.jsp" />
+	</definition>
+	<definition name="viewStudent" extends="base.definition">
+		<put-attribute name="title" value="View Student Details" />
+		<put-attribute name="body" value="/WEB-INF/jsp/viewStudent.jsp" />
+	</definition>
+
+	
+	
+	<!-- Batch definitions -->
+	<definition name="addBatch" extends="base.definition">
+		<put-attribute name="title" value="Add Batch" />
+		<put-attribute name="body" value="/WEB-INF/jsp/addBatch.jsp" />
+	</definition>
+	<definition name="viewAllBatch" extends="base.definition">
+		<put-attribute name="title" value="View Batch" />
+		<put-attribute name="body" value="/WEB-INF/jsp/viewAllBatch.jsp" />
+	</definition>
+	<definition name="viewBatchById" extends="base.definition">
+		<put-attribute name="title" value="Update Batch" />
+		<put-attribute name="body" value="/WEB-INF/jsp/viewBatchById.jsp" />
+	</definition>
+	<definition name="viewBatchById" extends="base.definition">
+		<put-attribute name="title" value="Update Batch" />
+		<put-attribute name="body" value="/WEB-INF/jsp/viewBatchById.jsp" />
+	</definition>
+	<definition name="updateBatch" extends="base.definition">
+		<put-attribute name="title" value="Update Batch" />
+		<put-attribute name="body" value="/WEB-INF/jsp/viewBatchById.jsp" />
+	</definition>
+
+
+
+
+
+	<!-- Term definitions -->
+	<definition name="addTerm" extends="base.definition">
+		<put-attribute name="title" value="Add Term" />
+		<put-attribute name="body" value="/WEB-INF/jsp/addTerm.jsp" />
+	</definition>
+	<definition name="viewAllTerms" extends="base.definition">
+		<put-attribute name="title" value="Add Term" />
+		<put-attribute name="body" value="/WEB-INF/jsp/viewAllTerms.jsp" />
+	</definition>
+
+
+	<!-- Subject definitions -->
+	<definition name="addSubject" extends="base.definition">
+		<put-attribute name="title" value="Add Subject" />
+		<put-attribute name="body" value="/WEB-INF/jsp/addSubject.jsp" />
+	</definition>
+	<definition name="viewAllSubject" extends="base.definition">
+		<put-attribute name="title" value="Add Subject" />
+		<put-attribute name="body" value="/WEB-INF/jsp/viewAllSubject.jsp" />
+	</definition>
+	<definition name="vwSubTermBatch" extends="base.definition">
+		<put-attribute name="title" value="Add Subject" />
+		<put-attribute name="body" value="/WEB-INF/jsp/vwSubTermBatch.jsp" />
+	</definition>
+
+
+
+</tiles-definitions>  

@@ -1,0 +1,25 @@
+**/bin/
+**/bin/**
+
+**/build/
+**/build/**
+
+**/target/
+**/target/**
+
+*.classpath
+*.project
+*.class
+
+
+**/.settings/**
+**/.gradle/**
+/build/
+
+**/.metadata/**
+**/.recommenders/**
+
+# Eclipse
+.classpath
+.project
+.settings/

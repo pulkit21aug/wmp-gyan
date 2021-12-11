@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.puls.gyan</groupId>
+		<artifactId>gyan</artifactId>
+		<version>1.0</version>
+	</parent>
+	<groupId>com.puls.gyan</groupId>
+	<artifactId>library-transaction-manager</artifactId>
+	<name>library-transaction-manager</name>
+	<description>library-transaction-manager:transaction manager : resource local</description>
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-jpa</artifactId>
+		</dependency>
+	</dependencies>
+</project>

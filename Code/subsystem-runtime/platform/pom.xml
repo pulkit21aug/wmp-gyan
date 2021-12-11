@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.puls</groupId>
+		<artifactId>subsystem-runtime</artifactId>
+		<version>1.0</version>
+	</parent>
+	<groupId>com.puls</groupId>
+	<artifactId>platform</artifactId>
+	<version>1.0</version>
+	<name>platform</name>
+	<packaging>pom</packaging>
+
+	<build>
+		<plugins>
+		 <plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<configuration>
+					<finalName>puls-platform</finalName>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<description>PLatform : Java : Tomcat</description>
+</project>

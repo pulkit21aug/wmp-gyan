@@ -1,0 +1,42 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jee="http://www.springframework.org/schema/jee" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd 
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd
+	http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd
+	http://www.springframework.org/schema/tx
+    http://www.springframework.org/schema/tx/spring-tx.xsd
+    http://www.springframework.org/schema/aop 
+    http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+
+	<context:annotation-config />
+	<!-- <context:component-scan base-package="com.puls.gyan" /> -->
+
+	<bean id="tenantService" class="com.puls.gyan.tenant.impl.TenantServiceImpl">
+		<property name="tenantServiceDao" ref="tenantServiceDao" />
+	</bean>
+
+	<bean id="subService" class="com.puls.gyan.sub.impl.SubServiceImpl">
+		<property name="subjectServiceDao" ref="subjectServiceDao" />
+	</bean>
+
+	<bean id="userService" class="com.puls.gyan.user.impl.UserServiceImpl">
+		<property name="userServiceDao" ref="userServiceDao" />
+	</bean>
+
+	<bean id="regService" class="com.puls.gyan.reg.impl.RegServiceImpl">
+		<property name="regServiceDao" ref="regServiceDao" />
+	</bean>
+
+	<bean id="configService" class="com.puls.gyan.config.impl.ConfigServiceImpl">
+		<property name="configServiceDao" ref="configServiceDao" />
+	</bean>
+
+	<bean id="googleHelper" class="com.puls.gyan.google.GoogleOauthHelper" >
+	    <property name="configService" ref="configService" />
+	</bean>
+</beans>

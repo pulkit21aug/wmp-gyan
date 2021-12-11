@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assembly>
+	<id>pathshala-ecs</id>
+	<formats>
+		<format>zip</format>
+	</formats>
+	<!--  
+	<fileSets>
+		<fileSet>
+			<directory>src/main/resources</directory>
+			<outputDirectory>pathshala-ecs</outputDirectory>
+		</fileSet>
+	</fileSets>
+	 -->
+	<files>
+		<file>
+			<source>src/main/scripts/pre-install.sh</source>
+			<outputDirectory>pathshala-ecs</outputDirectory>
+			<fileMode>755</fileMode>
+		</file>
+		<file>
+			<source>src/main/resources/set-env.sh</source>
+			<outputDirectory>pathshala-ecs</outputDirectory>
+			<fileMode>755</fileMode>
+		</file>
+	</files>
+</assembly>
